@@ -8,6 +8,9 @@ import Layout from 'components/Layout'
 import Home from 'views/Home'
 import Explore from 'views/Explore'
 import Collectibles from 'views/Collectibles'
+import Collections from 'views/Collections'
+import CollectionCategory from 'views/CollectionCategory'
+import CollectionDetail from 'views/CollectionDetail'
 
 const theme = createTheme({});
 
@@ -19,6 +22,9 @@ function App() {
           <Routes>
             <Route path='/explore/collectibles' element={<Collectibles />} />
             <Route path='/explore' element={<Explore />} />
+            <Route path='/collections/:category/:id' element={<CollectionDetail />} />
+            <Route path='/collections/:category' element={<CollectionCategory />} />
+            <Route path='/collections' element={<Collections />} />
             <Route path='/' element={<Home />} />
           </Routes>
         </Layout>

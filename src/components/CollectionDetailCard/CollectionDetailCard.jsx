@@ -54,7 +54,7 @@ const CollectionDetailCard = (props) => {
         <Typography variant='body1' color='#777684' sx={{ marginBottom: '20px' }}>
           {data.text}
         </Typography>
-        <CustomButton onClick={() => navigate('/explore/collectibles')} dark>
+        <CustomButton onClick={() => navigate(`/collections/${data.name}`)} dark>
           View Collection
         </CustomButton>
       </Box>

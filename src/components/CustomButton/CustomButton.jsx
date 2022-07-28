@@ -10,12 +10,12 @@ const useStyles = makeStyles(styles)
 
 const CustomButton = (props) => {
 
-  const {children, dark, ...others} = props
+  const {children, active, dark, className, ...others} = props
 
   const classes = useStyles()
 
   return (
-    <Button {...others} className={clsx(classes.outlineBtn, {[classes.dark]: dark})} variant='outlined'>
+    <Button {...others} className={clsx(classes.outlineBtn, {[classes.dark]: dark, [classes.active]: active, [className]: className})} variant='outlined'>
       {children}
     </Button>
   )

@@ -9,12 +9,21 @@ const recentCardStyles = ((theme) => ({
       paddingBottom: '30px'
     }
   },
+  smallCard: {
+    padding: '20px 15px'
+  },
   cardMedia: {
     height: '340px',
     '& img': {
       width: '100%',
       height: '100%'
     },
+    [theme.breakpoints.down('sm')]: {
+      height: '270px'
+    }
+  },
+  smallCardMedia: {
+    height: '220px',
     [theme.breakpoints.down('sm')]: {
       height: '270px'
     }
@@ -31,6 +40,15 @@ const recentCardStyles = ((theme) => ({
       '& h6': {
         fontSize: '20px',       
       }
+    }
+  },
+  smallCardContent: {
+    paddingTop: '18px',
+    '& h6': {
+      fontSize: '18px'
+    },
+    '& p': {
+      fontSize: "15px"
     }
   },
   mark: {
@@ -61,6 +79,20 @@ const recentCardStyles = ((theme) => ({
     },
     '& p': {
       lineHeight: '1'
+    }
+  },
+  smallCardHeader: {
+    '& h6': {    
+      fontSize: '16px'
+    },
+    '& p': {
+      fontSize: '15px'
+    }
+  },
+  smallCardBtn: {
+    '&.MuiButton-root': {
+      fontSize: '15px !important',
+      padding: '12px 17px !important'
     }
   }
 }))

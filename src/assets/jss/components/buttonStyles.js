@@ -45,6 +45,7 @@ const buttonStyles = ((theme) => ({
   },
   outlineBtn: {
     '&.MuiButton-root': {
+      backgroundColor: '#fff !important',
       fontSize: '16px',
       fontWeight: 'bold',
       textTransform: 'none',
@@ -60,6 +61,12 @@ const buttonStyles = ((theme) => ({
     '&.MuiButton-root': {
       color: '#0F0E36',
       borderColor: '#0F0E36'
+    }
+  },
+  active: {
+    '&.MuiButton-root': {
+      color: '#fff',
+      backgroundColor: 'rgba(85, 219, 46, 0.5) !important'
     }
   }
 }))
