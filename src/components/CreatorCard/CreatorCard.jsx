@@ -16,6 +16,7 @@ const useStyles = makeStyles(styles)
 const CreatorCard = (props) => {
 
   const classes = useStyles()
+  const navigate = useNavigate()
 
   const { data } = props
 
@@ -65,7 +66,7 @@ const CreatorCard = (props) => {
             Sales
           </Typography>
         </Box>
-        <CustomButton dark>
+        <CustomButton dark onClick={() => navigate(`/creators/${data.id}`)}>
           View Profile
         </CustomButton>
       </Box>

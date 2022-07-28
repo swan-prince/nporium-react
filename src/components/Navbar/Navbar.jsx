@@ -54,7 +54,7 @@ const Navbar = (props) => {
               <Link href='/collections' className={classes.link} underline='none' onClick={(e) => handleNavigate(e, '/collections')}>
                 Collections
               </Link>
-              <Link href='/' className={classes.link} underline='none'>
+              <Link href='/creators' className={classes.link} underline='none' onClick={(e) => handleNavigate(e, '/creators')}>
                 Creators
               </Link>
               <Link href='/' className={classes.link} underline='none'>

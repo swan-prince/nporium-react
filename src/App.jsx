@@ -11,6 +11,8 @@ import Collectibles from 'views/Collectibles'
 import Collections from 'views/Collections'
 import CollectionCategory from 'views/CollectionCategory'
 import CollectionDetail from 'views/CollectionDetail'
+import Creators from 'views/Creators'
+import CreatorDetail from 'views/CreatorDetail'
 
 const theme = createTheme({});
 
@@ -25,6 +27,8 @@ function App() {
             <Route path='/collections/:category/:id' element={<CollectionDetail />} />
             <Route path='/collections/:category' element={<CollectionCategory />} />
             <Route path='/collections' element={<Collections />} />
+            <Route path='/creators/:id' element={<CreatorDetail />} />
+            <Route path='/creators' element={<Creators />} />
             <Route path='/' element={<Home />} />
           </Routes>
         </Layout>
