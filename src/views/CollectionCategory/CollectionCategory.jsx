@@ -180,7 +180,7 @@ const CollectionCategory = () => {
 
             <Box className={classes.searchInput} flex={1}>
               <OutlinedInput
-                startAdornment={<img src='/images/loupe.png' />}
+                startAdornment={<img src='/images/loupe.png' alt="" />}
                 fullWidth
                 placeholder='Search by name or attribute'
               />

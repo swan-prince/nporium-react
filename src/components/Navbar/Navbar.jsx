@@ -42,7 +42,7 @@ const Navbar = (props) => {
 
             <Box className={clsx(classes.searchInput, classes.hiddenOnMobile)} ml='auto'>
               <OutlinedInput 
-                startAdornment={<img src='/images/loupe.png' />}
+                startAdornment={<img src='/images/loupe.png' alt="" />}
                 placeholder='Search'
               />
             </Box>
