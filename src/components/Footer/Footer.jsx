@@ -43,10 +43,10 @@ const Footer = () => {
             <Link href='/' className={classes.link} underline='none'>
               My Account
             </Link>
-            <Link href='/' className={classes.link} underline='none' onClick={(e) => handleNavigate(e, '/blog')}>
+            <Link href='/blog' className={classes.link} underline='none' onClick={(e) => handleNavigate(e, '/blog')}>
               Blog
             </Link>
-            <Link href='/' className={classes.link} underline='none'>
+            <Link href='/contact' className={classes.link} underline='none' onClick={(e) => handleNavigate(e, '/contact')}>
               Contact
             </Link>
           </Box>

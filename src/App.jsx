@@ -15,6 +15,7 @@ import Creators from 'views/Creators'
 import CreatorDetail from 'views/CreatorDetail'
 import Blog from 'views/Blog'
 import BlogDetail from 'views/BlogDetail'
+import Contact from 'views/Contact'
 
 const theme = createTheme({});
 
@@ -33,6 +34,7 @@ function App() {
             <Route path='/creators' element={<Creators />} />
             <Route path='/blog' element={<Blog />} />
             <Route path='/blog/:id' element={<BlogDetail />} />
+            <Route path='/contact' element={<Contact />} />
             <Route path='/' element={<Home />} />
           </Routes>
         </Layout>
