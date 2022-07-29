@@ -60,7 +60,7 @@ const Navbar = (props) => {
               <Link href='/' className={classes.link} underline='none'>
                 About
               </Link>
-              <Button variant='outlined' className={classes.loginBtn}>
+              <Button variant='outlined' className={classes.loginBtn} onClick={(e) => handleNavigate(e, '/login')}>
                 Login/Register
               </Button>
             </Box>
