@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import clsx from 'clsx'
 import { useNavigate } from 'react-router-dom';
 import { makeStyles } from "@mui/styles";
@@ -13,6 +13,8 @@ import CustomButton from 'components/CustomButton';
 import TitleBox from 'components/TitleBox';
 import TextField from 'components/CustomInput/TextField'
 
+import { AppContext } from 'context/AppContextProvider'
+
 import styles from 'assets/jss/views/accountStyles'
 
 const useStyles = makeStyles(styles)
@@ -21,6 +23,8 @@ const Account = () => {
 
   const classes = useStyles()
   const navigate = useNavigate()
+  
+  const { handleLogout } = useContext(AppContext)
 
   const [tab, setTab] = useState('profile')
 
@@ -93,7 +97,10 @@ const Account = () => {
             </Button>
             <Button
               variant='text'
-              onClick={() => navigate('/')}
+              onClick={() => {
+                handleLogout()
+                navigate('/login')
+              }}
             >
               Log out
             </Button>
