@@ -13,6 +13,8 @@ import CollectionCategory from 'views/CollectionCategory'
 import CollectionDetail from 'views/CollectionDetail'
 import Creators from 'views/Creators'
 import CreatorDetail from 'views/CreatorDetail'
+import Blog from 'views/Blog'
+import BlogDetail from 'views/BlogDetail'
 
 const theme = createTheme({});
 
@@ -29,6 +31,8 @@ function App() {
             <Route path='/collections' element={<Collections />} />
             <Route path='/creators/:id' element={<CreatorDetail />} />
             <Route path='/creators' element={<Creators />} />
+            <Route path='/blog' element={<Blog />} />
+            <Route path='/blog/:id' element={<BlogDetail />} />
             <Route path='/' element={<Home />} />
           </Routes>
         </Layout>

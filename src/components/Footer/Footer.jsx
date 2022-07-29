@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import { makeStyles } from "@mui/styles";
 
 import Box from '@mui/material/Box';
@@ -15,18 +16,25 @@ const Footer = () => {
 
   const classes = useStyles()
 
+  const navigate = useNavigate()
+
+  const handleNavigate = (e, url) => {
+    e.preventDefault();
+    navigate(url)
+  }
+
   return (
     <Box className={classes.footer}>
       <CustomContainer>
         <Box display='flex' alignItems='center' justifyContent='space-between' flexWrap='wrap' className={classes.linksSection}>
           <Box display='flex' flexWrap='wrap'>
-            <Link href='/' className={classes.link} underline='none'>
+            <Link href='/' className={classes.link} underline='none' onClick={(e) => handleNavigate(e, '/explore')}>
               Explore
             </Link>
-            <Link href='/' className={classes.link} underline='none'>
+            <Link href='/' className={classes.link} underline='none' onClick={(e) => handleNavigate(e, '/collections')}>
               Collections
             </Link>
-            <Link href='/' className={classes.link} underline='none'>
+            <Link href='/' className={classes.link} underline='none' onClick={(e) => handleNavigate(e, '/creators')}>
               Creators
             </Link>
             <Link href='/' className={classes.link} underline='none'>
@@ -35,7 +43,7 @@ const Footer = () => {
             <Link href='/' className={classes.link} underline='none'>
               My Account
             </Link>
-            <Link href='/' className={classes.link} underline='none'>
+            <Link href='/' className={classes.link} underline='none' onClick={(e) => handleNavigate(e, '/blog')}>
               Blog
             </Link>
             <Link href='/' className={classes.link} underline='none'>
