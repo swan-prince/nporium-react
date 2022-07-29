@@ -18,6 +18,7 @@ import BlogDetail from 'views/BlogDetail'
 import Contact from 'views/Contact'
 import Login from 'views/Login'
 import Register from 'views/Register'
+import Profile from 'views/Profile'
 
 const theme = createTheme({});
 
@@ -39,6 +40,7 @@ function App() {
             <Route path='/contact' element={<Contact />} />
             <Route path='/login' element={<Login />} />
             <Route path='/signup' element={<Register />} />
+            <Route path='/profile' element={<Profile />} />
             <Route path='/' element={<Home />} />
           </Routes>
         </Layout>
