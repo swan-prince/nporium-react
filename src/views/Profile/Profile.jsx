@@ -127,7 +127,7 @@ const Profile = () => {
                   <img src="/images/icons/iconmonstr-share.png" alt="" width='20px' height='20px' />&nbsp;
                   Share
                 </CustomButton>
-                <CustomButton sx={{ marginLeft: '10px', marginBottom: '8px' }} dark>
+                <CustomButton sx={{ marginLeft: '10px', marginBottom: '8px' }} dark onClick={() => navigate('/account')}>
                   Edit Profile
                 </CustomButton>
               </Box>

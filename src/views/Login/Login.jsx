@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import clsx from 'clsx'
 import { useNavigate } from 'react-router-dom';
 import { makeStyles } from "@mui/styles";
@@ -13,6 +13,8 @@ import CustomButton from 'components/CustomButton';
 import StyledBox from 'components/StyledBox';
 import TextField from 'components/CustomInput/TextField'
 
+import { AppContext } from 'context/AppContextProvider'
+
 import styles from 'assets/jss/views/authStyles'
 
 const useStyles = makeStyles(styles)
@@ -21,8 +23,10 @@ const Login = () => {
 
   const classes = useStyles()
 
-  const navigate = useNavigate()
+  const navigate = useNavigate()  
 
+  const { handleLogin } = useContext(AppContext)
+  
   return (
     <Box>
       <StyledBox className={clsx(classes.header)} mx='auto'>
@@ -77,7 +81,14 @@ const Login = () => {
             </Box>
 
             <Box mb={5}>
-              <CustomButton fullWidth className={classes.loginBtn}>
+              <CustomButton 
+                fullWidth 
+                className={classes.loginBtn} 
+                onClick={() => {
+                  handleLogin();
+                  navigate('/')
+                }}
+              >
                 Login
               </CustomButton>
             </Box>
